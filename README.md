@@ -1,3 +1,5 @@
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+
 # telescope-terraform-doc.nvim
 
 `telescope-terraform-doc.nvim` is an extension for [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) that provides its users with ability to search and browse terraform providers docs.
