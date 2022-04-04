@@ -1,0 +1,25 @@
+name: Scrape Terraform Registry Modules
+
+on:
+  schedule:
+    - cron: '*/20 * * * *'
+
+jobs:
+  scrape-terraform-registry-modules-api:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set Up git configs
+        run: |
+          export TZ=Asia/Singapore
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+      - name: semantic-release dependencies
+        run: |
+          cd scripts
+          go run main.go
+      - name: Commit and Push file
+        run: |
+          git add -A
+          git commit -m "chore: update module api [$(date)]"
+          git push
