@@ -9,18 +9,12 @@ repos:
     - id: check-yaml
     - id: check-added-large-files
     - id: check-merge-conflict
-    - id: detect-aws-credentials
     - id: detect-private-key
-    # - id: no-commit-to-branch
 
-- repo: local
+- repo: https://github.com/JohnnyMorganz/StyLua
+  rev: v0.13.0
   hooks:
     - id: stylua
-      name: StyLua
-      entry: stylua
-      language: system
-      files: ^.*\.lua$
-
 
 - repo: https://github.com/Woile/commitizen
   rev: v2.22.0

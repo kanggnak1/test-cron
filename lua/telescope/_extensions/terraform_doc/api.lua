@@ -7,6 +7,15 @@ local base_url = "https://registry.terraform.io"
 ---
 ---Returns provider version id
 function M.get_provider_versions_id(full_name)
+
+
+
+
+
+
+
+
+
   local tmp = vim.split(full_name, "/")
   local namespace = tmp[1]
   local name = tmp[2]
@@ -18,6 +27,10 @@ function M.get_provider_versions_id(full_name)
   }).body)
   return resp.data[1].id
 end
+
+
+
+
 
 ---
 ---Returns the metadata for the specified provider version
